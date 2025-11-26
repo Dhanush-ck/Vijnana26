@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    /* font-family: "Playwrite DE Grund", cursive; */
+    font-family: "Protest Guerrilla", sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #add8e6;
+}
+
+.container-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    max-height: 60vh;
+    max-width: 60vw;
+    animation: 2s glowUp linear infinite;
+}
+
+.text {
+    font-size: 10vh;
+    font-weight: 400;
+    animation: 2s glowUp linear infinite;
+}
+
+@keyframes glowUp {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px blue);
+    }
+    50% {
+        filter: drop-shadow(0 0 5px #fff);
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .text {
+        font-size: 5vh;
+    }
+}
