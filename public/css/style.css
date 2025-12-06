@@ -17,6 +17,24 @@ body {
     flex-direction: column;
 }
 
+.bg-holder {
+    /* background-color: yellow; */
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    /* filter: blur(10px); */
+}
+
+.bg-holder img {
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
 #home {
     height: 100vh;
     width: 100%;
@@ -52,25 +70,20 @@ body {
 
 .header-labels a {
     color: white;
-
 }
 
-.bg-holder {
-    /* background-color: yellow; */
-    position: absolute;
-    z-index: -1;
-    width: 100%;
+.home-content {
     height: 100%;
-    left: 0;
-    top: 0;
-    /* filter: blur(10px); */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.bg-holder img {
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.5;
+.home-content span {
+    color: white;
+    font-size: 200px;
+    font-weight: 900;
 }
 
 #about {
