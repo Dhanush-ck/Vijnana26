@@ -72,6 +72,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    font-size: 2rem;
 }
 
 .header-labels a {
@@ -88,16 +89,21 @@ body {
 
 .home-content span {
     color: white;
-    font-size: 200px;
+    font-size: 18rem;
     font-weight: 900;
     letter-spacing: 10px;
 }
 
-#about {
+#info {
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: grey;
+}
+
+#events {
+    width: 100%;
+    height: 100vh;
 }
