@@ -1,4 +1,5 @@
-
+/* Montserrat & Exo */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @font-face {
   font-family: Manga;
@@ -89,9 +90,10 @@ body {
 
 .home-content span {
     color: white;
-    font-size: 18rem;
+    font-size: 15rem;
     font-weight: 900;
     letter-spacing: 10px;
+    font-family: "Montserrat", sans-serif;
 }
 
 #info {
