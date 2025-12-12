@@ -92,18 +92,28 @@ body {
     color: white;
 }
 
-.vijnana {
-    color: white;
+.vijnana, .home-content span {
+    color: whitesmoke;
     font-size: 15rem;
     font-weight: 900;
     letter-spacing: 10px;
     font-family: "Montserrat", sans-serif;
 }
 
+.vijnana-before {
+    position: absolute;
+}
+
+.vijnana {
+    transform-origin: bottom;
+    transform: scaleY(0.6);
+    height: 50px;
+}
+
 .vijnana::before {
     content: "VIJÑANA";
     animation: wave 1.5s ease-in-out infinite;
-    /* color: black; */
+    color: #af9fff;
 }
 
 .bg-holder-info {
