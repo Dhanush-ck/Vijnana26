@@ -39,7 +39,7 @@ body {
     height: 100%;
     width: 100%;
     z-index: -1;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 #home {
@@ -102,18 +102,21 @@ body {
 
 .vijnana-before {
     position: absolute;
+    /* filter: drop-shadow(0 0 5px black ); */
 }
 
 .vijnana {
     transform-origin: bottom;
     transform: scaleY(0.6);
-    height: 50px;
+    /* height: 50px; */
+    filter: drop-shadow(0 0 5px black);
 }
 
 .vijnana::before {
     content: "VIJÑANA";
     animation: wave 1.5s ease-in-out infinite;
     color: #af9fff;
+    color: #9f9fff;
 }
 
 .bg-holder-info {
@@ -128,7 +131,7 @@ body {
     height: 100%;
     width: 100%;
     z-index: -1;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 #info {
@@ -241,7 +244,7 @@ body {
 
 #events {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -254,6 +257,14 @@ body {
     grid-template-rows: auto 1fr;
 }
 
+.event-container h1 {
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    margin: 0 0 20px 0;
+}
+
 .event-holder {
     display: flex;
     align-items: center;
@@ -262,18 +273,69 @@ body {
 }
 
 .event{
-    height: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
     width: 300px;
-    background-image: url(../images/gojo2.jpg);
-    background-position: center;
-    background-size: cover;
+    /* height: 80vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 5px solid white;
+    padding: 5px;
+    transition: 0.2s;
 }
 
-/* .event img {
-    object-fit: fit;
-    max-height: 100%;
-} */
+.event:hover {
+    scale: 1.05;
+}
 
+.event > * {
+    border: solid 3px black;
+}
+
+.event h2 {
+    width: 100%;
+    text-align: center ;
+    font-size: 2rem;
+    border-bottom: none;
+}
+
+.event-image-holder {
+    overflow: hidden;
+    height: 400px;
+    width: 300px;
+}
+
+.event-image-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-image {
+    height: 400px;
+    width: 300px;
+    border: solid white 2px;
+    overflow: hidden;
+}
+
+.event-text {
+    text-align: center;
+    width: 100%;
+    border-top: none;
+}
+
+.event-holder span {
+    width: 100%;
+    text-align: center;
+    border-top: none;
+    padding: 5px 0 5px 0;
+    font-size: 1.4rem;
+    background-color: #9f9fff;
+    cursor: pointer;
+}
 
 @keyframes marquee {
     from { transform: translateX(calc(-100% - var(--gap))); }
