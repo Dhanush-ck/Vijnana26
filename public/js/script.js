@@ -7,6 +7,8 @@ day.innerHTML = hour.innerHTML = minute.innerHTML = second.innerHTML = "00";
 
 const targetDate = new Date("January 07 2026 09:00:00").getTime()
 
+window.onload = timer();
+
 function timer() {
     const currentDate = new Date().getTime()
     const distance = targetDate - currentDate
