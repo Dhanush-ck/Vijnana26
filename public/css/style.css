@@ -372,12 +372,20 @@ body {
     cursor: pointer;
 }
 
+.event-holder span a {
+    color: black;
+}
+
 .more {
     /* background-color: #fff; */
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: black;
+}
+
+.more a {
     color: black;
 }
 
