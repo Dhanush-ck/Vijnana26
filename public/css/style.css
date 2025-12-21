@@ -30,14 +30,16 @@ body {
 }
 
 .bg-holder {
-    /* background-color: yellow; */
-    /* position: absolute; */
     z-index: -1;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    /* filter: blur(10px); */
+
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: absolute;
 }
 
 .bg-holder img {
@@ -56,10 +58,10 @@ body {
 }
 
 .home-container {
-    position: absolute;
+    /* position: absolute;
     top: 0;
-    left: 0;
-    height: 100%;
+    left: 0; */
+    height: 100vh;
     width: 100%;
     display: grid;
     grid-template-rows: auto 1fr;
@@ -130,6 +132,7 @@ body {
 }
 
 .bg-holder-info {
+    display: none;
     position: absolute;
     z-index: -1;
     width: 100%;
@@ -150,6 +153,13 @@ body {
     display: flex;
     flex-direction: column;
     /* grid-row: auto 1fr; */
+
+    justify-content: center;
+    background-image: url(../images/bg-1.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
 }
 
 .timer {
@@ -191,7 +201,7 @@ body {
     flex-direction: column;
     line-height: 130px;
     height: fit-content;
-    margin: 0 0 0 40px;
+    margin: 0 0 20px 40px;
 }
 
 .info-header span {
@@ -203,6 +213,10 @@ body {
     -webkit-text-fill-color: transparent;
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
+}
+
+.info-header span:first-child {
+    display: none;
 }
 
 .info-image {
@@ -280,6 +294,7 @@ body {
     width: 100%;
     text-align: center;
     font-size: 4rem;
+    cursor: default;
     /* margin: 0 0 20px 0; */
 }
 
@@ -402,7 +417,13 @@ body {
 .inner-circle span {
     font-size: 1.8rem;
     height: min-content;
-    width: min-content;
+    width: fit-content;
+}
+
+.inner-circle img {
+    font-size: 3rem;
+    font-weight: 400;
+    width: 40px;
 }
 
 .bg {
@@ -479,6 +500,1334 @@ body {
         filter: drop-shadow(0 0 5px #9f9fff);
     }
 }
+
+/* Responsive  */
+
+@media only screen and (max-width: 325px) {
+
+    html {
+        font-size: 8px;
+    }
+
+    .bg-holder {
+        position: absolute;
+        height: 40vh;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    .bg-holder img {
+        width: 120%;
+    }
+
+    .home-container {
+        height: 40vh;
+        position: unset;
+        top: unset;
+        left: unset;
+    }
+
+    #main-logo {
+        height: 35px;
+    }
+
+    .header {
+        margin: 10px 15px 0px 15px;
+    }
+
+    .header-labels {
+        font-size: 2rem;
+    }
+
+    .header-labels a:hover {
+        color: white;
+    }
+
+    .vijnana, .home-content span{
+        font-size: 6rem;
+        letter-spacing: 7px;
+    }
+
+    .bg-holder-info {
+        display: none;
+    }
+
+    #info {
+        justify-content: center;
+        background-image: url(../images/bg-1.jpg);
+        background-color: rgba(0, 0, 0, 0.6);
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: darken;
+    }
+
+    .timer {
+        font-size: 1.4rem;
+        gap: 10px;
+    }
+
+    .timer > * {
+        padding: 3px 0px 3px 0px ;
+        width: 7rem;
+    }
+
+    #day, #hour, #minute, #second {
+        font-size: 3rem;
+    }
+
+    .info-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    .info-header {
+        line-height: 50px;
+        margin: 0 0 0 20px;
+    }
+
+    .info-header span {
+        font-size: 5.5rem;
+    }
+
+    .info-header span:first-child {
+        display: block;
+    }
+
+    .info-header span:nth-child(2), .info-header span:nth-child(3) {
+        display: none;
+    }
+
+    .info-image img {
+        height: 40vh;
+    }
+
+    .marquee {
+        --gap: 20px;
+    }
+
+    .marquee ul {
+        margin: 3px 0 3px 0;
+    }
+
+    .marquee-content span {
+        font-size: 16px;
+    }
+
+    .event-container {
+        gap: 40px;
+    }
+
+    .event-holder {
+        gap: 50px;
+    }
+
+    .event {
+        width: 210px;
+    }
+
+    .event h2 {
+        font-size: 3rem;
+    }
+
+    .event-image-holder {
+        height: 270px;
+        width: 210px;
+    }
+
+    .event-text {
+        font-size: 1.6rem;
+    }
+
+    .event-holder span {
+        font-size: 2rem;
+    }
+
+    .outer-circle {
+        width: 110px;
+        height: 110px;
+        padding: 5px;
+    }
+
+    .inner-circle {
+        width: 80%;
+        height: 80%;
+    }
+
+    .inner-circle span {
+        font-size: 2.2rem;
+    }
+
+    .inner-circle img {
+        width: 22px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        gap: 20px;
+    }
+
+    .contact-items {
+        font-size: 1.4rem;
+    }
+
+    .icon {
+        height: 22px;
+    }
+
+    .contact-items h1 {
+        font-size: 4rem;
+        margin: 0 0 8px 0;
+    }
+
+    .map {
+        /* display: none; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin: 0 10px 0 10px; */
+        width: 100%;
+        margin: 0;
+    }
+
+    .map iframe {
+        width: 90%;
+        height: 220px;
+        margin: 10px 0 0 0;
+    }
+
+}
+
+@media only screen and (min-width: 325px) and (max-width: 400px) {
+
+    html {
+        font-size: 8px;
+    }
+
+    .bg-holder {
+        position: absolute;
+        height: 30vh;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    .bg-holder img {
+        width: 120%;
+    }
+
+    .home-container {
+        height: 30vh;
+        position: unset;
+        top: unset;
+        left: unset;
+    }
+
+    #main-logo {
+        height: 35px;
+    }
+
+    .header {
+        margin: 10px 15px 0px 15px;
+    }
+
+    .header-labels {
+        font-size: 2.4rem;
+    }
+
+    .header-labels a:hover {
+        color: white;
+    }
+
+    .vijnana, .home-content span{
+        font-size: 6.6rem;
+        letter-spacing: 7px;
+    }
+
+    .bg-holder-info {
+        display: none;
+    }
+
+    #info {
+        justify-content: center;
+        background-image: url(../images/bg-1.jpg);
+        background-color: rgba(0, 0, 0, 0.6);
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: darken;
+    }
+
+    .timer {
+        font-size: 1.4rem;
+        gap: 10px;
+    }
+
+    .timer > * {
+        padding: 0 0px 3px 0px ;
+        width: 8rem;
+    }
+
+    #day, #hour, #minute, #second {
+        font-size: 3rem;
+    }
+
+    .info-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    .info-header {
+        line-height: 60px;
+        margin: 0 0 10px 20px;
+    }
+
+    .info-header span {
+        font-size: 5.3rem;
+    }
+
+
+    .info-image img {
+        height: 38vh;
+    }
+
+    .marquee {
+        --gap: 20px;
+    }
+
+    .marquee ul {
+        margin: 5px 0 5px 0;
+    }
+
+    .marquee-content span {
+        font-size: 20px;
+    }
+
+    .event-container {
+        gap: 50px;
+    }
+
+    .event {
+        width: 240px;
+    }
+
+    .event-holder {
+        gap: 60px;
+    }
+
+    .event h2 {
+        font-size: 3rem;
+    }
+
+    .event-image-holder {
+        height: 300px;
+        width: 240px;
+    }
+
+    .event-text {
+        font-size: 1.6rem;
+    }
+
+    .event-holder span {
+        font-size: 2rem;
+    }
+
+    .outer-circle {
+        width: 120px;
+        height: 120px;
+        padding: 5px;
+    }
+
+    .inner-circle {
+        width: 80%;
+        height: 80%;
+    }
+
+    .inner-circle span {
+        font-size: 2.2rem;
+    }
+
+    .inner-circle img {
+        width: 25px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        gap: 20px;
+        padding: 0 0 20px 0;
+    }
+
+    .contact-items {
+        font-size: 1.6rem;
+    }
+
+    .icon {
+        height: 25px;
+    }
+
+    .contact-items h1 {
+        font-size: 4.4rem;
+        margin: 0 0 10px 0;
+    }
+
+    .map {
+        /* display: none; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin: 0 10px 0 10px; */
+        width: 100%;
+    }
+
+    .map iframe {
+        width: 90%;
+        height: 260px;
+        margin: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 400px) and (max-width: 450px) {
+
+    html {
+        font-size: 8px;
+    }
+
+    .bg-holder {
+        position: absolute;
+        height: 30vh;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    .bg-holder img {
+        width: 120%;
+    }
+
+    .home-container {
+        height: 30vh;
+        position: unset;
+        top: unset;
+        left: unset;
+    }
+
+    #main-logo {
+        height: 35px;
+    }
+
+    .header {
+        margin: 10px 15px 0px 15px;
+    }
+
+    .header-labels {
+        font-size: 2.4rem;
+    }
+
+    .header-labels a:hover {
+        color: white;
+    }
+
+    .vijnana, .home-content span{
+        font-size: 8rem;
+        letter-spacing: 7px;
+    }
+
+    .bg-holder-info {
+        display: none;
+    }
+
+    #info {
+        justify-content: center;
+        background-image: url(../images/bg-1.jpg);
+        background-color: rgba(0, 0, 0, 0.6);
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: darken;
+    }
+
+    .timer {
+        font-size: 1.6rem;
+        gap: 10px;
+    }
+
+    .timer > * {
+        padding: 0 0px 3px 0px ;
+    }
+
+    #day, #hour, #minute, #second {
+        font-size: 4rem;
+    }
+
+    .info-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    .info-header {
+        line-height: 60px;
+    }
+
+    .info-header span {
+        font-size: 6rem;
+    }
+
+    .info-header span:first-child {
+        display: block;
+    }
+
+    .info-header span:nth-child(2), .info-header span:nth-child(3) {
+        display: none;
+    }
+
+    .info-image img {
+        height: 40vh;
+    }
+
+    .marquee {
+        --gap: 20px;
+    }
+
+    .marquee ul {
+        margin: 5px 0 5px 0;
+    }
+
+    .marquee-content span {
+        font-size: 20px;
+    }
+
+    .event-holder {
+        gap: 70px;
+    }
+
+    .event {
+        width: 240px;
+    }
+
+    .event h2 {
+        font-size: 3rem;
+    }
+
+    .event-image-holder {
+        height: 320px;
+        width: 240px;
+    }
+
+    .event-text {
+        font-size: 1.6rem;
+    }
+
+    .event-holder span {
+        font-size: 2rem;
+    }
+
+    .outer-circle {
+        width: 120px;
+        height: 120px;
+        padding: 5px;
+    }
+
+    .inner-circle {
+        width: 80%;
+        height: 80%;
+    }
+
+    .inner-circle span {
+        font-size: 2.4rem;
+    }
+
+    .inner-circle img {
+        width: 30px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        gap: 20px;
+    }
+
+    .contact-items {
+        font-size: 1.6rem;
+    }
+
+    .icon {
+        height: 25px;
+    }
+
+    .contact-items h1 {
+        font-size: 4.4rem;
+        margin: 0 0 10px 0;
+    }
+
+    .map {
+        /* display: none; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin: 0 10px 0 10px; */
+        width: 100%;
+    }
+
+    .map iframe {
+        width: 90%;
+        height: 260px;
+        margin: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 450px) and (max-width: 770px) and (max-height: 730px) {
+
+    html {
+        font-size: 10px;
+    }
+
+    .bg-holder {
+        position: absolute;
+        height: 40vh;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home-container {
+        height: 40vh;
+        position: unset;
+        top: unset;
+        left: unset;
+    }
+
+    #main-logo {
+        height: 50px;
+    }
+
+    .header {
+        margin: 10px 15px 0px 15px;
+    }
+
+    .header-labels {
+        font-size: 2.4rem;
+    }
+
+    .header-labels a:hover {
+        color: white;
+    }
+
+    .vijnana, .home-content span{
+        font-size: 8rem;
+        letter-spacing: 7px;
+    }
+
+    .bg-holder-info {
+        display: none;
+    }
+
+    #info {
+        justify-content: center;
+        background-image: url(../images/bg-1.jpg);
+        background-color: rgba(0, 0, 0, 0.6);
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: darken;
+    }
+
+    .timer > * {
+        width: 6rem;
+    }
+
+    .info-header {
+        line-height: 70px;
+        margin: 0 0 20px 20px;
+    }
+
+    .info-header span {
+        font-size: 6.5rem;
+    }
+
+    .info-image img {
+        height: 40vh;
+    }
+
+    .marquee {
+        --gap: 25px;
+    }
+
+    .marquee ul {
+        margin: 5px 0 5px 0;
+    }
+
+    .marquee-content span {
+        font-size: 26px;
+    }
+
+    .event-container {
+        margin: 20px 0 40px 0;
+    }
+
+    .event-holder {
+        gap: 70px;
+    }
+
+    .event {
+        width: 270px;
+    }
+
+    .event h2 {
+        font-size: 3.4rem;
+    }
+
+    .event-image-holder {
+        height: 320px;
+        width: 270px;
+    }
+
+    .event-text {
+        font-size: 1.6rem;
+    }
+
+    .event-holder span {
+        font-size: 2.6rem;
+    }
+
+    .more {
+        width: 320px;
+    }
+
+    .outer-circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    .inner-circle img {
+        width: 30px;
+    }
+
+    .contact-container {
+        padding: 0 0 20px 0;
+    }
+
+    .icon {
+        height: 24px;
+    }
+
+    .contact-items {
+        font-size: 1.2rem;
+        margin: 0 0 0 20px;
+    }
+
+    .contact-items h1 {
+        font-size: 4.2rem;
+    }
+
+    .contact-items span {
+        gap: 10px;
+    }
+
+    .map {
+        margin: 0 20px 0 0;
+    }
+
+    .map iframe {
+        width: 240px;
+        height: 240px;
+    }
+
+}
+@media only screen and (min-width: 450px) and (max-width: 770px) and (min-height: 730px) {
+
+    html {
+        font-size: 10px;
+    }
+
+    .bg-holder {
+        position: absolute;
+        height: 40vh;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home-container {
+        height: 40vh;
+        position: unset;
+        top: unset;
+        left: unset;
+    }
+
+    #main-logo {
+        height: 50px;
+    }
+
+    .header {
+        margin: 10px 15px 0px 15px;
+    }
+
+    .header-labels {
+        font-size: 2.4rem;
+    }
+
+    .header-labels a:hover {
+        color: white;
+    }
+
+    .vijnana, .home-content span{
+        font-size: 10rem;
+        letter-spacing: 7px;
+    }
+
+    .bg-holder-info {
+        display: none;
+    }
+
+    #info {
+        justify-content: center;
+        background-image: url(../images/bg-1.jpg);
+        background-color: rgba(0, 0, 0, 0.6);
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: darken;
+    }
+
+    .info-header {
+        line-height: 80px;
+    }
+
+    .info-header span {
+        font-size: 6.5rem;
+    }
+
+    .info-image img {
+        height: 35vh;
+    }
+
+    .marquee {
+        --gap: 25px;
+    }
+
+    .marquee ul {
+        margin: 8px 0 8px 0;
+    }
+
+    .marquee-content span {
+        font-size: 30px;
+    }
+
+    .event-container {
+        margin: 20px 0 40px 0;
+    }
+
+    .event-holder {
+        gap: 80px;
+    }
+
+    .event {
+        width: 290px;
+    }
+
+    .event h2 {
+        font-size: 3.4rem;
+    }
+
+    .event-image-holder {
+        height: 360px;
+        width: 290px;
+    }
+
+    .event-text {
+        font-size: 2rem;
+    }
+
+    .event-holder span {
+        font-size: 3rem;
+    }
+
+    .more {
+        width: 315px;
+    }
+
+    .icon {
+        height: 32px;
+    }
+
+    .contact-items {
+        font-size: 1.6rem;
+        margin: 0 0 0 20px;
+    }
+
+    .contact-items h1 {
+        font-size: 4.5rem;
+    }
+
+    .map iframe {
+        width: 350px;
+    }
+
+}
+
+@media only screen and (min-width: 770px) and (max-width: 860px) {
+
+     html {
+        font-size: 10px;
+    }
+
+    .bg-holder {
+        position: absolute;
+        height: 40vh;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home-container {
+        height: 40vh;
+        position: unset;
+        top: unset;
+        left: unset;
+    }
+
+    #main-logo {
+        height: 60px;
+    }
+
+    .header {
+        margin: 10px 15px 0px 15px;
+    }
+
+    .header-labels {
+        font-size: 2.4rem;
+    }
+
+    .header-labels a:hover {
+        color: white;
+    }
+
+    .vijnana, .home-content span{
+        font-size: 11rem;
+        letter-spacing: 18px;
+    }
+
+    .bg-holder-info {
+        display: none;
+    }
+
+    #info {
+        justify-content: center;
+        background-image: url(../images/bg-1.jpg);
+        background-color: rgba(0, 0, 0, 0.6);
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: darken;
+    }
+
+    .info-header {
+        line-height: 80px;
+    }
+
+    .info-header span {
+        font-size: 6.5rem;
+    }
+
+    .info-image img {
+        height: 35vh;
+    }
+
+    .marquee {
+        --gap: 25px;
+    }
+
+    .marquee ul {
+        margin: 8px 0 8px 0;
+    }
+
+    .marquee-content span {
+        font-size: 30px;
+    }
+
+    .event-container {
+        margin: 20px 0 40px 0;
+        gap: 40px;
+    }
+    
+    .event-container h1 {
+        font-size: 5rem;
+    }
+
+    .event-holder {
+        gap: 80px;
+    }
+
+    .event {
+        width: 290px;
+    }
+
+    .event h2 {
+        font-size: 3.4rem;
+    }
+
+    .event-image-holder {
+        height: 360px;
+        width: 290px;
+    }
+
+    .event-text {
+        font-size: 2rem;
+    }
+
+    .event-holder span {
+        font-size: 3rem;
+    }
+
+    .more {
+        width: 315px;
+    }
+
+    .icon {
+        height: 32px;
+    }
+
+    .contact-items {
+        font-size: 1.6rem;
+        margin: 0 0 0 30px;
+    }
+
+    .contact-items h1 {
+        font-size: 4.5rem;
+    }
+
+    .map iframe {
+        width: 350px;
+    }
+
+}
+
+@media only screen and (min-width: 860px) and (max-width: 1030px) and (min-height: 650px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    .bg-holder {
+        position: absolute;
+        height: 40vh;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home-container {
+        height: 40vh;
+        position: unset;
+        top: unset;
+        left: unset;
+    }
+
+    #main-logo {
+        height: 90px;
+    }
+
+    .header {
+        margin: 10px 15px 0px 15px;
+    }
+
+    .header-labels {
+        font-size: 2.4rem;
+    }
+
+    .header-labels a:hover {
+        color: white;
+    }
+
+    .vijnana, .home-content span{
+        font-size: 10.5rem;
+        letter-spacing: 18px;
+    }
+
+    .bg-holder-info {
+        display: none;
+    }
+
+    #info {
+        justify-content: center;
+        background-image: url(../images/bg-1.jpg);
+        background-color: rgba(0, 0, 0, 0.6);
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: darken;
+    }
+
+    .timer {
+        margin: 60px 0 60px 0;
+    }
+
+    .timer > * {
+        border-radius: 10px;
+    }
+
+    .info-header {
+        line-height: 100px;
+        margin: 0 0 10px 30px ;
+    }
+
+    .info-header span {
+        font-size: 6.2rem;
+    }
+
+    .info-image img {
+        height: 36vh;
+    }
+
+    .marquee {
+        --gap: 25px;
+    }
+
+    .marquee ul {
+        margin: 8px 0 8px 0;
+    }
+
+    .marquee-content span {
+        font-size: 30px;
+    }
+
+    .event-container {
+        margin: 20px 0 40px 0;
+        gap: 40px;
+    }
+    
+    .event-container h1 {
+        font-size: 5rem;
+    }
+
+    .event-holder {
+        gap: 80px;
+    }
+
+    .event {
+        width: 320px;
+    }
+
+    .event h2 {
+        font-size: 3rem;
+    }
+
+    .event-image-holder {
+        height: 400px;
+        width: 320px;
+    }
+
+    .event-text {
+        font-size: 1.5rem;
+    }
+
+    .event-holder span {
+        font-size: 3rem;
+    }
+
+    .more {
+        width: 340px;
+    }
+
+    .outer-circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .inner-circle span {
+        font-size: 3rem;
+    }
+
+    .inner-circle img {
+        width: 50px;
+    }
+
+    .icon {
+        height: 34px;
+    }
+
+    .contact-items {
+        font-size: 1.6rem;
+        margin: 0 0 0 30px;
+        gap: 20px;
+    }
+    .contact-items h1 {
+        font-size: 4.7rem;
+    }
+
+    .map iframe {
+        width: 470px;
+        height: 330px;
+    }
+
+}
+
+@media only screen and (min-width: 860px) and (max-width: 1030px) and (max-height: 650px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    .bg-holder {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home-container {
+        height: 100vh;
+        position: unset;
+        top: unset;
+        left: unset;
+    }
+
+    #main-logo {
+        height: 90px;
+    }
+
+    .header {
+        margin: 10px 15px 0px 15px;
+    }
+
+    .header-labels {
+        font-size: 2.4rem;
+    }
+
+    .header-labels a:hover {
+        color: white;
+    }
+
+    .vijnana, .home-content span{
+        font-size: 10.5rem;
+        letter-spacing: 18px;
+    }
+
+    .bg-holder-info {
+        display: none;
+    }
+
+    #info {
+        justify-content: center;
+        background-image: url(../images/bg-1.jpg);
+        background-color: rgba(0, 0, 0, 0.6);
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: darken;
+    }
+
+    .timer {
+        margin: 60px 0 60px 0;
+    }
+
+    .timer > * {
+        border-radius: 10px;
+    }
+
+    .info-header {
+        line-height: 100px;
+        margin: 0 0 20px 30px ;
+    }
+
+    .info-header span {
+        font-size: 6.2rem;
+    }
+
+    .info-image img {
+        height: 60vh;
+    }
+
+    .marquee {
+        --gap: 25px;
+    }
+
+    .marquee ul {
+        margin: 8px 0 8px 0;
+    }
+
+    .marquee-content span {
+        font-size: 30px;
+    }
+
+    .event-container {
+        margin: 20px 0 40px 0;
+        gap: 40px;
+    }
+    
+    .event-container h1 {
+        font-size: 5rem;
+    }
+
+    .event-holder {
+        gap: 80px;
+    }
+
+    .event {
+        width: 220px;
+    }
+
+    .event h2 {
+        font-size: 2rem;
+    }
+
+    .event-image-holder {
+        height: 300px;
+        width: 220px;
+    }
+
+    .event-text {
+        font-size: 1.2rem;
+    }
+
+    .event-holder span {
+        font-size: 1.6rem;
+    }
+
+    .more {
+        width: 340px;
+    }
+
+    .outer-circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .inner-circle span {
+        font-size: 2rem;
+    }
+
+    .inner-circle img {
+        width: 45px;
+    }
+
+    .icon {
+        height: 30px;
+    }
+
+    .contact-items {
+        font-size: 1.2rem;
+        margin: 0 0 0 30px;
+        gap: 15px;
+    }
+
+    .contact-items h1 {
+        font-size: 4.7rem;
+    }
+
+    .map iframe {
+        width: 430px;
+        height: 300px;
+    }
+
+}
+
 
 @keyframes marquee {
     from { transform: translateX(calc(-100% - var(--gap))); }
