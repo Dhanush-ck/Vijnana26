@@ -88,6 +88,15 @@ body {
     grid-template-rows: 1fr auto;
 }
 
+.event-new {
+    columns: 300px;
+    gap: 20px;
+}
+
+.event-new img {
+    width: 100%;
+}
+
 .event > * {
     border: solid 3px black;
 }
