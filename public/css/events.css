@@ -30,7 +30,7 @@
 
 body {
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,7 +40,7 @@ body {
 
 .bg {
     background-image: url(../images/bg-1.jpg);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
     background-position: center;
     background-size: cover;
     background-blend-mode: darken;
@@ -53,9 +53,9 @@ body {
     z-index: -1;
 }
 
-.container {
-    width: 95%;
-    height: 95%;
+.container-element {
+    width: 100%;
+    /* height: 95%; */
     display: grid;
     grid-template-rows: auto 1fr;
     margin: 20px;
@@ -93,8 +93,13 @@ body {
     gap: 20px;
 }
 
+.event-new a {
+    width: 100%;
+}
+
 .event-new img {
     width: 100%;
+    margin: 0 0 20px 0;
 }
 
 .event > * {
