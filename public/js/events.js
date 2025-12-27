@@ -88,7 +88,7 @@ const workshopList = [
     {
         name: "Workshop on Full Stack",
         link: "https://forms.gle/aum21vgdfpAhSzQ48",
-        image: "./images/poster/404 POSTER NOT FOUND.png"
+        image: "./images/poster/Full Stack Workshop.png"
     },
 ]
 
