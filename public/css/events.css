@@ -28,18 +28,20 @@
     border: 3px solid #bbb;
 }
 
-body {
+.container {
     width: 100vw;
-    /* height: 100vh; */
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     background-color: black;
+    z-index: -1;
+    overflow-x: hidden;
 }
 
 .bg {
-    background-image: url(../images/bg-1.jpg);
+    background-image: url(../images/bg.png);
     background-color: rgba(0, 0, 0, 0.4);
     background-position: center;
     background-size: cover;
@@ -50,110 +52,149 @@ body {
     left: 0;
     top: 0;
     filter: blur(2px);
-    z-index: -1;
+    z-index: 0;
 }
 
 .container-element {
-    width: 100%;
-    /* height: 95%; */
+    width: 100vw;
+    height: 100vh;
     display: grid;
-    grid-template-rows: auto 1fr;
-    margin: 20px;
+    grid-template-rows: auto auto 1fr;
     gap: 20px;
+    z-index: 1;
 }
 
 .container h1 {
     width: 100%;
     text-align: center;
     font-size: 60px;
+    color: #FFFFFF;
+    text-shadow: 0 0 8px rgba(143, 163, 255, 0.8);
 }
 
-.events {
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly; */
+.select {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    overflow-x: hidden;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    font-size: 2rem;
+    gap: 10px;
+}
+
+.select-items {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 0 10px 0;
+    cursor: pointer;
+    filter: drop-shadow(0 0 100px white);
+    transition: 0.2s;
+}
+
+.selected {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.scroll {
     overflow-y: scroll;
 }
 
-.event {
-    width: 250px;
-    height: 300px;
-    background-color: #fff;
-    color: black;
-    display: grid;
-    grid-template-rows: 1fr auto;
-}
-
-.event-new {
+.events {
     columns: 300px;
     gap: 20px;
-}
-
-.event-new a {
+    margin: 0 10px 0 10px;
     width: 100%;
 }
 
-.event-new img {
+.events a {
+    width: 100%;
+}
+
+.events img {
     width: 100%;
     margin: 0 0 20px 0;
 }
 
-.event > * {
-    border: solid 3px black;
-}
-
-.event-name {
-    background-color: #9f9fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3.2rem;
-    text-align: center;
-}
-
-.event-details {
-    font-size: 1.2rem;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0 10px 0;
-}
-
 @media only screen and (max-width: 325px) {
-    .events {
-        margin: 0 0 0 10px;
+
+    .container h1 {
+        font-size: 35px;
+        margin: 15px 0 0 0 ;
     }
+
+    .select {
+        font-size: 1.4rem;
+    }
+
+    .select-items {
+        padding: 5px 0 5px 0;
+    }
+
 }
 
 @media only screen and (min-width: 325px) and (max-width: 400px) {
-    .events {
-        margin: 0 0 0 35px;
+
+    .container h1 {
+        font-size: 40px;
+        margin: 10px 0 0 0 ;
     }
+
+    .select {
+        font-size: 1.5rem;
+    }
+    
 }
 
 @media only screen and (min-width: 400px) and (max-width: 450px) {
-    .events {
-        margin: 0 0 0 60px;
+    
+    .container h1 {
+        font-size: 40px;
+        margin: 10px 0 0 0 ;
     }
+
+    .select {
+        font-size: 1.5rem;
+    }
+
 }
 
 @media only screen and (min-width: 450px) and (max-width: 770px) and (max-height: 730px) {
-    .events {
-        margin: 0 0 0 100px;
+
+    .container h1 {
+        font-size: 40px;
+        margin: 15px 0 0 0 ;
     }
+
+    .events {
+        columns: 250px;
+    }
+    
+    .select {
+        font-size: 1.4rem;
+    }
+
 }
 
 @media only screen and (min-width: 450px) and (max-width: 770px) and (min-height: 730px) {
-    .events {
-        margin: 0 0 0 40px;
+
+    .container h1 {
+        font-size: 50px;
+        margin: 25px 0 0 0 ;
     }
+    
+    .select {
+        font-size: 1.7rem;
+    }
+
 }
 
-@media only screen and (min-width: 770px) and (max-width: 860px) {
-    .events {
-        margin: 0 0 0 60px;
+@media only screen and (min-width: 860px) and (max-width: 1030px) and (min-height: 650px) {
+
+    .container h1 {
+        font-size: 75px;
+        margin: 35px 0 0 0 ;
     }
+    
+    .select {
+        font-size: 2.3rem;
+    }
+
 }
